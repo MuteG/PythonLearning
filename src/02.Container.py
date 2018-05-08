@@ -88,3 +88,98 @@ print(sortList)
 # 会输出 ['A', 'B', 'C']
 print(copyList)
 # 会输出 ['B', 'A', 'C']
+
+## 元组
+### 创建元组
+emptyTuple = ()
+print(emptyTuple)
+# 会输出 ()
+oneTuple = ('a',)
+print(oneTuple)
+# 会输出 ('a',)
+normalTuple = ('a', 'b', 'c')
+print(normalTuple)
+# 会输出 ('a', 'b', 'c')
+
+normalTuple = ('A', 'B', 'C')
+print(normalTuple)
+# 会输出 ('A', 'B', 'C')
+a, b, c = normalTuple
+print(a, b, c)
+# 会输出 A B C
+
+## 字典
+### 创建字典
+emptyDict = {}
+print(emptyDict)
+# 会输出 {}
+normalDict = {'A': 'aaa', 'B': 'bbb'}
+print(normalDict)
+# 会输出 {'A': 'aaa', 'B': 'bbb'}
+
+### 操作元组
+modifyDict = {'A': 'aaa', 'B': 'bbb'}
+modifyDict['A'] = 'aaaA'
+modifyDict['C'] = 'ccc'
+print(modifyDict)
+# 会输出 {'A': 'aaaA', 'B': 'bbb', 'C': 'ccc'}
+
+updateDict = {'A': 'aaa', 'B': 'bbb'}
+updateDict.update({'C': 'ccc', 'B': 'bbbB'})
+print(updateDict)
+# 会输出 {'A': 'aaa', 'B': 'bbbB', 'C': 'ccc'}
+
+clearDict = {'A': 'aaa', 'B': 'bbb'}
+clearDict.clear()
+print(clearDict)
+# 会输出 {}
+
+keysDict = {1: '111', '2': 222}
+print(keysDict.keys())
+# 会输出 dict_keys([1, '2'])
+print(keysDict.values())
+# 会输出 dict_values(['111', 222])
+print(keysDict.items())
+# 会输出 dict_items([(1, '111'), ('2', 222)])
+
+## 集合
+### 创建集合
+normalSet = {0, 1, 2, 3, 4, 5, 6}
+print(normalSet)
+# 会输出 {0, 1, 2, 3, 4, 5, 6}
+
+emptySet = set()
+print(emptySet)
+# 会输出 set()
+
+### 操作集合
+aSet = {1, 2}
+bSet = {2, 3}
+abSet = {1, 2, 3}
+
+print(aSet & bSet)
+print(aSet.intersection(bSet))
+# 会输出 {2}
+print(aSet | bSet)
+print(aSet.union(bSet))
+# 会输出 {1, 2, 3}
+print(aSet - bSet)
+print(aSet.difference(bSet))
+# 会输出 {1}
+print(aSet ^ bSet)
+print(aSet.symmetric_difference(bSet))
+# 会输出 {1, 3}
+print(aSet <= abSet)
+print(aSet.issubset(abSet))
+# 会输出 True
+print(abSet <= abSet)
+# 会输出 True
+print(abSet < abSet)
+# 会输出 False
+print(abSet >= bSet)
+print(abSet.issuperset(bSet))
+# 会输出 True
+print(abSet >= abSet)
+# 会输出 True
+print(abSet > abSet)
+# 会输出 False
